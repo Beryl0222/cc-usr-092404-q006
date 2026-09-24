@@ -1,0 +1,128 @@
+[
+  {
+    "event_id": "evt-demo-001",
+    "kind": "INSTITUTION_TRUSTED",
+    "occurred_at": "2026-09-01T09:00:00+08:00",
+    "subject_id": "inst-camp-a",
+    "source_id": "platform",
+    "source_seq": 1,
+    "payload": {"institution_id": "inst-camp-a", "trust_version": 1, "brand": "营地品牌A（虚构）"}
+  },
+  {
+    "event_id": "evt-demo-002",
+    "kind": "INSTITUTION_TRUSTED",
+    "occurred_at": "2026-09-01T09:05:00+08:00",
+    "subject_id": "inst-gym-b",
+    "source_id": "platform",
+    "source_seq": 2,
+    "payload": {"institution_id": "inst-gym-b", "trust_version": 1, "brand": "运动馆品牌B（虚构）"}
+  },
+  {
+    "event_id": "evt-demo-003",
+    "kind": "INTRO_PROOF_ISSUED",
+    "occurred_at": "2026-09-10T10:00:00+08:00",
+    "subject_id": "child-demo-001",
+    "source_id": "inst-camp-a",
+    "source_seq": 1,
+    "payload": {"proof_id": "proof-demo-001", "child_id": "child-demo-001", "issued_by": "inst-camp-a", "expires_at": "2026-12-31T23:59:59+08:00"}
+  },
+  {
+    "event_id": "evt-demo-004",
+    "kind": "GUARDIAN_LINKED",
+    "occurred_at": "2026-09-10T10:05:00+08:00",
+    "subject_id": "child-demo-001",
+    "source_id": "inst-camp-a",
+    "source_seq": 2,
+    "payload": {"child_id": "child-demo-001", "guardian_id": "guardian-demo-01", "relation": "mother", "relationship_version": 1, "proof_id": "proof-demo-001"}
+  },
+  {
+    "event_id": "evt-demo-005",
+    "kind": "CONTACT_PURPOSES_SET",
+    "occurred_at": "2026-09-10T10:06:00+08:00",
+    "subject_id": "child-demo-001",
+    "source_id": "inst-camp-a",
+    "source_seq": 3,
+    "payload": {"child_id": "child-demo-001", "guardian_id": "guardian-demo-01", "purposes": ["pickup", "emergency"], "purposes_version": 1}
+  },
+  {
+    "event_id": "evt-demo-006",
+    "kind": "VALIDITY_UPDATED",
+    "occurred_at": "2026-09-10T10:07:00+08:00",
+    "subject_id": "child-demo-001",
+    "source_id": "inst-camp-a",
+    "source_seq": 4,
+    "payload": {"child_id": "child-demo-001", "guardian_id": "guardian-demo-01", "valid_from": "2026-09-10T00:00:00+08:00", "valid_until": "2026-12-31T23:59:59+08:00", "validity_version": 1}
+  },
+  {
+    "event_id": "evt-demo-007",
+    "kind": "CONTACT_METHOD_VERIFIED",
+    "occurred_at": "2026-09-10T10:08:00+08:00",
+    "subject_id": "guardian-demo-01",
+    "source_id": "inst-camp-a",
+    "source_seq": 5,
+    "payload": {"guardian_id": "guardian-demo-01", "channel": "phone", "masked_value": "138****0000", "contact_version": 1}
+  },
+  {
+    "event_id": "evt-demo-008",
+    "kind": "CAPABILITY_GRANTED",
+    "occurred_at": "2026-09-19T15:00:00+08:00",
+    "subject_id": "child-demo-001",
+    "source_id": "platform",
+    "source_seq": 3,
+    "payload": {"grant_id": "grant-demo-001", "child_id": "child-demo-001", "institution_id": "inst-gym-b", "purposes": ["pickup"], "contact_version_ids": [1], "valid_from": "2026-09-20T00:00:00+08:00", "valid_until": "2026-10-20T23:59:59+08:00"}
+  },
+  {
+    "event_id": "evt-demo-009",
+    "kind": "CONTACT_DECISION_RECORDED",
+    "occurred_at": "2026-09-21T16:30:00+08:00",
+    "subject_id": "child-demo-001",
+    "source_id": "inst-gym-b",
+    "source_seq": 1,
+    "payload": {"decision_id": "decision-001", "child_id": "child-demo-001", "guardian_id": "guardian-demo-01", "institution_id": "inst-gym-b", "purpose": "pickup", "relationship_version": 1, "proof_id": "proof-demo-001", "trust_version": 1, "contact_version_id": 1, "outcome": "allowed", "grant_id": "grant-demo-001"}
+  },
+  {
+    "event_id": "evt-demo-010",
+    "kind": "EMERGENCY_CONTACT_USED",
+    "occurred_at": "2026-09-22T11:20:00+08:00",
+    "subject_id": "child-demo-001",
+    "source_id": "inst-gym-b",
+    "source_seq": 2,
+    "payload": {"child_id": "child-demo-001", "institution_id": "inst-gym-b", "staff_id": "staff-demo-09", "contact_version_id": 1, "reason_code": "injury_on_site"}
+  },
+  {
+    "event_id": "evt-demo-011",
+    "kind": "CONTACT_DECISION_RECORDED",
+    "occurred_at": "2026-09-22T11:21:00+08:00",
+    "subject_id": "child-demo-001",
+    "source_id": "inst-gym-b",
+    "source_seq": 3,
+    "payload": {"decision_id": "decision-002", "child_id": "child-demo-001", "guardian_id": "guardian-demo-01", "institution_id": "inst-gym-b", "purpose": "emergency", "relationship_version": 1, "proof_id": "proof-demo-001", "trust_version": 1, "contact_version_id": 1, "outcome": "emergency", "emergency_event_id": "evt-demo-010"}
+  },
+  {
+    "event_id": "evt-demo-012",
+    "kind": "CONTACT_METHOD_ROTATED",
+    "occurred_at": "2026-09-25T09:00:00+08:00",
+    "subject_id": "guardian-demo-01",
+    "source_id": "inst-camp-a",
+    "source_seq": 6,
+    "payload": {"guardian_id": "guardian-demo-01", "channel": "phone", "contact_version": 2, "replaces_version": 1, "masked_value": "139****1111"}
+  },
+  {
+    "event_id": "evt-demo-013",
+    "kind": "RELATIONSHIP_REVOKED",
+    "occurred_at": "2026-09-26T10:00:00+08:00",
+    "subject_id": "child-demo-001",
+    "source_id": "inst-camp-a",
+    "source_seq": 7,
+    "payload": {"child_id": "child-demo-001", "guardian_id": "guardian-demo-01", "relationship_version": 2, "revoked_by": "guardian-demo-02"}
+  },
+  {
+    "event_id": "evt-demo-014",
+    "kind": "INSTITUTION_TRUST_REVOKED",
+    "occurred_at": "2026-09-28T18:00:00+08:00",
+    "subject_id": "inst-gym-b",
+    "source_id": "platform",
+    "source_seq": 4,
+    "payload": {"institution_id": "inst-gym-b", "trust_version": 2, "revoked_by": "platform"}
+  }
+]

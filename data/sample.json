@@ -2,8 +2,15 @@
   "event_id": "sample-020-001",
   "kind": "GUARDIAN_LINKED",
   "occurred_at": "2026-09-20T09:00:00+08:00",
-  "subject_id": "demo-020",
+  "subject_id": "child-demo-020",
+  "source_id": "inst-camp-a",
+  "source_seq": 1,
   "payload": {
+    "child_id": "child-demo-020",
+    "guardian_id": "guardian-demo-20",
+    "relation": "mother",
+    "relationship_version": 1,
+    "proof_id": "proof-demo-020",
     "note": "虚构资料，仅用于格式核对"
   }
 }
