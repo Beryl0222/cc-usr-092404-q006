@@ -2,8 +2,14 @@
   "event_id": "sample-020-001",
   "kind": "GUARDIAN_LINKED",
   "occurred_at": "2026-09-20T09:00:00+08:00",
-  "subject_id": "demo-020",
+  "subject_id": "child-020",
   "payload": {
+    "relation_id": "rel-020-mother",
+    "relation_version": 1,
+    "guardian_ref": "guardian-mother-020",
+    "relation_type": "mother",
+    "decision_weight": 1,
+    "valid_from": "2026-09-20T09:00:00+08:00",
     "note": "虚构资料，仅用于格式核对"
   }
 }

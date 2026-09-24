@@ -1,0 +1,370 @@
+[
+  {
+    "event_id": "evt-030-01",
+    "kind": "ORG_TRUST_UPDATED",
+    "occurred_at": "2026-09-21T09:00:00+08:00",
+    "subject_id": "org-camp-a",
+    "payload": {
+      "org_ref": "org-camp-a",
+      "trust_version": 1,
+      "trust_level": "standard",
+      "allowed_purpose_codes": ["pickup", "emergency_medical"],
+      "max_capability_scope": "single_child"
+    }
+  },
+  {
+    "event_id": "evt-030-02",
+    "kind": "ORG_TRUST_UPDATED",
+    "occurred_at": "2026-09-21T09:05:00+08:00",
+    "subject_id": "org-gym-b",
+    "payload": {
+      "org_ref": "org-gym-b",
+      "trust_version": 1,
+      "trust_level": "standard",
+      "allowed_purpose_codes": ["pickup"],
+      "max_capability_scope": "single_child"
+    }
+  },
+  {
+    "event_id": "evt-030-03",
+    "kind": "GUARDIAN_LINKED",
+    "occurred_at": "2026-09-21T09:10:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "relation_id": "rel-030-mother",
+      "relation_version": 1,
+      "guardian_ref": "guardian-mother-030",
+      "relation_type": "mother",
+      "decision_weight": 1,
+      "valid_from": "2026-09-21T09:10:00+08:00"
+    }
+  },
+  {
+    "event_id": "evt-030-04",
+    "kind": "GUARDIAN_LINKED",
+    "occurred_at": "2026-09-21T09:11:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "relation_id": "rel-030-father",
+      "relation_version": 1,
+      "guardian_ref": "guardian-father-030",
+      "relation_type": "father",
+      "decision_weight": 1,
+      "valid_from": "2026-09-21T09:11:00+08:00"
+    }
+  },
+  {
+    "event_id": "evt-030-05",
+    "kind": "CHILD_ALIAS_REGISTERED",
+    "occurred_at": "2026-09-21T09:20:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "alias_id": "alias-030-camp-a",
+      "alias_version": 1,
+      "org_ref": "org-camp-a",
+      "alias_value_masked": "小*"
+    }
+  },
+  {
+    "event_id": "evt-030-06",
+    "kind": "CONTACT_PURPOSE_UPDATED",
+    "occurred_at": "2026-09-21T09:25:00+08:00",
+    "subject_id": "federation",
+    "payload": {
+      "purpose_code": "pickup",
+      "purpose_version": 3,
+      "risk_level": "low",
+      "allowed_channel_types": ["phone", "message"]
+    }
+  },
+  {
+    "event_id": "evt-030-07",
+    "kind": "CONTACT_PURPOSE_UPDATED",
+    "occurred_at": "2026-09-21T09:26:00+08:00",
+    "subject_id": "federation",
+    "payload": {
+      "purpose_code": "emergency_medical",
+      "purpose_version": 1,
+      "risk_level": "high",
+      "allowed_channel_types": ["phone"]
+    }
+  },
+  {
+    "event_id": "evt-030-08",
+    "kind": "VALIDITY_WINDOW_SET",
+    "occurred_at": "2026-09-21T09:30:00+08:00",
+    "subject_id": "federation",
+    "payload": {
+      "window_id": "win-cap-default",
+      "window_version": 1,
+      "applies_to_kind": "CAPABILITY_GRANTED",
+      "applies_to_ref": "*",
+      "not_before": "2026-09-21T00:00:00+08:00",
+      "not_after": "2026-12-31T23:59:59+08:00"
+    }
+  },
+  {
+    "event_id": "evt-030-09",
+    "kind": "CONTACT_CONFIRMED",
+    "occurred_at": "2026-09-21T09:40:00+08:00",
+    "subject_id": "guardian-mother-030",
+    "payload": {
+      "contact_id": "contact-mother-1",
+      "contact_version": 1,
+      "guardian_ref": "guardian-mother-030",
+      "channel_type": "phone",
+      "channel_value_masked": "138****0000",
+      "verification_method": "offline_staff_check",
+      "source_id": "camp-app-offline-7",
+      "source_seq": 6
+    }
+  },
+  {
+    "event_id": "evt-030-10",
+    "kind": "CONTACT_CONFIRMED",
+    "occurred_at": "2026-09-21T09:42:00+08:00",
+    "subject_id": "guardian-mother-030",
+    "payload": {
+      "contact_id": "contact-mother-1",
+      "contact_version": 1,
+      "guardian_ref": "guardian-mother-030",
+      "channel_type": "phone",
+      "channel_value_masked": "138****0000",
+      "verification_method": "sms_code",
+      "source_id": "camp-app-offline-7",
+      "source_seq": 7
+    }
+  },
+  {
+    "event_id": "evt-030-10",
+    "kind": "CONTACT_CONFIRMED",
+    "occurred_at": "2026-09-21T09:42:00+08:00",
+    "subject_id": "guardian-mother-030",
+    "payload": {
+      "contact_id": "contact-mother-1",
+      "contact_version": 1,
+      "guardian_ref": "guardian-mother-030",
+      "channel_type": "phone",
+      "channel_value_masked": "138****0000",
+      "verification_method": "sms_code",
+      "source_id": "camp-app-offline-7",
+      "source_seq": 7
+    }
+  },
+  {
+    "event_id": "evt-030-11",
+    "kind": "INTRO_PROOF_ISSUED",
+    "occurred_at": "2026-09-21T10:00:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "proof_id": "proof-030-a2b",
+      "proof_version": 1,
+      "child_ref": "child-030",
+      "issued_by_org": "org-camp-a",
+      "issued_to_org": "org-gym-b",
+      "nonce": "nonce-9f27c1",
+      "expires_at": "2026-09-28T10:00:00+08:00",
+      "scope_purpose_codes": ["pickup"]
+    }
+  },
+  {
+    "event_id": "evt-030-12",
+    "kind": "CAPABILITY_GRANTED",
+    "occurred_at": "2026-09-21T10:05:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "capability_id": "cap-030-gym-b",
+      "child_ref": "child-030",
+      "grantee_org_ref": "org-gym-b",
+      "allowed_purpose_codes": ["pickup"],
+      "allowed_contacts": [{ "contact_id": "contact-mother-1", "contact_version": 1 }],
+      "basis": {
+        "relation_id": "rel-030-mother",
+        "relation_version": 1,
+        "proof_id": "proof-030-a2b",
+        "proof_version": 1,
+        "org_trust_version": 1
+      },
+      "not_before": "2026-09-21T10:05:00+08:00",
+      "expires_at": "2026-09-23T10:05:00+08:00"
+    }
+  },
+  {
+    "event_id": "evt-030-13",
+    "kind": "CONTACT_DECISION_RECORDED",
+    "occurred_at": "2026-09-22T08:30:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "decision_id": "dec-030-01",
+      "org_ref": "org-gym-b",
+      "child_ref": "child-030",
+      "purpose_code": "pickup",
+      "outcome": "allowed",
+      "decided_by": "staff-gym-b-02",
+      "basis": {
+        "relation_id": "rel-030-mother",
+        "relation_version": 1,
+        "proof_id": "proof-030-a2b",
+        "proof_version": 1,
+        "org_trust_version": 1,
+        "capability_id": "cap-030-gym-b",
+        "contact_id": "contact-mother-1",
+        "contact_version": 1
+      }
+    }
+  },
+  {
+    "event_id": "evt-030-14",
+    "kind": "GUARDIAN_CONFLICT_RECORDED",
+    "occurred_at": "2026-09-22T20:00:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "conflict_id": "conflict-030-01",
+      "child_ref": "child-030",
+      "guardian_refs": ["guardian-mother-030", "guardian-father-030"],
+      "conflicting_fields": ["pickup_authorization"],
+      "detected_rule_ref": "rule-conflict-detect-v2"
+    }
+  },
+  {
+    "event_id": "evt-030-15",
+    "kind": "GUARDIAN_LINKED",
+    "occurred_at": "2026-09-22T20:10:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "relation_id": "rel-030-father",
+      "relation_version": 2,
+      "guardian_ref": "guardian-father-030",
+      "relation_type": "father",
+      "decision_weight": 2,
+      "valid_from": "2026-09-22T20:10:00+08:00"
+    }
+  },
+  {
+    "event_id": "evt-030-16",
+    "kind": "HIGH_RISK_CHANGE_FROZEN",
+    "occurred_at": "2026-09-22T20:11:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "freeze_id": "freeze-030-01",
+      "conflict_ref": "conflict-030-01",
+      "frozen_change_ref": "evt-030-15",
+      "rule_ref": "rule-conflict-freeze-v1",
+      "child_ref": "child-030"
+    }
+  },
+  {
+    "event_id": "evt-030-17",
+    "kind": "BREAK_GLASS_ACCESS_RECORDED",
+    "occurred_at": "2026-09-23T07:50:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "access_id": "bga-030-01",
+      "org_ref": "org-camp-a",
+      "child_ref": "child-030",
+      "purpose_code": "emergency_medical",
+      "contact_id": "contact-mother-1",
+      "contact_version": 1,
+      "justification": "儿童晨检发热，现场无法等待常规确认流程",
+      "recorded_by": "staff-camp-a-11",
+      "follow_up_required_by": "2026-09-24T07:50:00+08:00"
+    }
+  },
+  {
+    "event_id": "evt-030-18",
+    "kind": "CONTACT_DECISION_RECORDED",
+    "occurred_at": "2026-09-23T07:50:30+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "decision_id": "dec-030-02",
+      "org_ref": "org-camp-a",
+      "child_ref": "child-030",
+      "purpose_code": "emergency_medical",
+      "outcome": "break_glass",
+      "decided_by": "staff-camp-a-11",
+      "basis": {
+        "relation_id": "rel-030-mother",
+        "relation_version": 1,
+        "org_trust_version": 1,
+        "contact_id": "contact-mother-1",
+        "contact_version": 1,
+        "break_glass_ref": "bga-030-01"
+      }
+    }
+  },
+  {
+    "event_id": "evt-030-19",
+    "kind": "CAPABILITY_EXPIRED",
+    "occurred_at": "2026-09-23T10:05:00+08:00",
+    "subject_id": "cap-030-gym-b",
+    "payload": {
+      "capability_id": "cap-030-gym-b",
+      "expired_at": "2026-09-23T10:05:00+08:00",
+      "sweep_id": "sweep-2026-09-23-01"
+    }
+  },
+  {
+    "event_id": "evt-030-20",
+    "kind": "HIGH_RISK_CHANGE_RELEASED",
+    "occurred_at": "2026-09-23T12:00:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "freeze_id": "freeze-030-01",
+      "child_ref": "child-030",
+      "released_by": "guardian-mother-030",
+      "resolution": "双方确认维持 rel-030-father v1，v2 变更作废"
+    }
+  },
+  {
+    "event_id": "evt-030-21",
+    "kind": "CONTACT_ROTATED",
+    "occurred_at": "2026-09-23T18:00:00+08:00",
+    "subject_id": "guardian-mother-030",
+    "payload": {
+      "contact_id": "contact-mother-1",
+      "retired_contact_version": 1,
+      "rotated_at": "2026-09-23T18:00:00+08:00",
+      "reason": "监护人更换手机号"
+    }
+  },
+  {
+    "event_id": "evt-030-22",
+    "kind": "CONTACT_CONFIRMED",
+    "occurred_at": "2026-09-23T18:05:00+08:00",
+    "subject_id": "guardian-mother-030",
+    "payload": {
+      "contact_id": "contact-mother-1",
+      "contact_version": 2,
+      "guardian_ref": "guardian-mother-030",
+      "channel_type": "phone",
+      "channel_value_masked": "139****2222",
+      "verification_method": "sms_code",
+      "source_id": "camp-app-offline-7",
+      "source_seq": 8
+    }
+  },
+  {
+    "event_id": "evt-030-23",
+    "kind": "RELATIONSHIP_REVOKED",
+    "occurred_at": "2026-09-24T09:00:00+08:00",
+    "subject_id": "child-030",
+    "payload": {
+      "relation_id": "rel-030-father",
+      "revoked_relation_version": 1,
+      "revoked_by": "guardian-father-030",
+      "effective_at": "2026-09-24T09:00:00+08:00",
+      "reason": "监护人撤回照护授权"
+    }
+  },
+  {
+    "event_id": "evt-030-24",
+    "kind": "ORG_EXITED",
+    "occurred_at": "2026-09-24T18:00:00+08:00",
+    "subject_id": "org-gym-b",
+    "payload": {
+      "org_ref": "org-gym-b",
+      "exit_at": "2026-09-24T18:00:00+08:00",
+      "final_trust_version": 1
+    }
+  }
+]
